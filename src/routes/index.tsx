@@ -8,9 +8,11 @@ export const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        index: true,
+        path: "/",
         element: <Home />,
       },
+      // Futuras rotas podem ser adicionadas aqui
+      // { path: "/projects", element: <Projects /> }
     ],
   },
 ]);

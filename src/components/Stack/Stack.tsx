@@ -1,3 +1,5 @@
+import "../../styles/components/_stack.scss";
+
 export const Stack = () => {
   const stacks = [
     { category: "Front-end", items: ["React", "TypeScript", "Sass"] },
@@ -8,10 +10,10 @@ export const Stack = () => {
   ];
 
   return (
-    <section style={{ maxWidth: "900px", margin: "0 auto 3rem auto" }}>
-      <h2 style={{ marginBottom: "1rem" }}>Stack Técnica</h2>
+    <section className="stack">
+      <h2>Stack Técnica</h2>
       {stacks.map((s) => (
-        <div key={s.category} style={{ marginBottom: "0.8rem" }}>
+        <div key={s.category}>
           <strong>{s.category}:</strong> {s.items.join(", ")}
         </div>
       ))}

@@ -2,17 +2,17 @@ import { Outlet } from "react-router-dom";
 
 export const MainLayout = () => {
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      <header style={{ padding: "1.5rem 2rem", borderBottom: "1px solid #222" }}>
-        Bruno Almeida
+    <div>
+      <header>
+        <h1>Portfolio Bruno Almeida</h1>
       </header>
 
-      <main style={{ flex: 1, padding: "2rem" }}>
-        <Outlet />
+      <main>
+        <Outlet /> {/* Aqui o Home será renderizado */}
       </main>
 
-      <footer style={{ padding: "1.5rem 2rem", borderTop: "1px solid #222" }}>
-        © {new Date().getFullYear()} Bruno Almeida
+      <footer>
+        <p>© 2026 Bruno Almeida</p>
       </footer>
     </div>
   );

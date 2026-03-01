@@ -1,0 +1,21 @@
+.contact {
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    li {
+      margin-bottom: 0.5rem;
+      color: #aaa;
+
+      a {
+        color: #aaa;
+        transition: color 0.2s;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

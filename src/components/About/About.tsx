@@ -1,10 +1,17 @@
+import "../../styles/components/_about.scss";
+
 export const About = () => {
   return (
-    <section style={{ maxWidth: "900px", margin: "0 auto 3rem auto" }}>
+    <section className="about">
       <h2>Sobre mim</h2>
-      <p style={{ color: "#aaa" }}>
-        Construo aplicações escaláveis e testáveis, com código limpo e modular.
-        Organizo projetos pensando em manutenção, performance e integração com APIs.
+      <p>
+        Olá! Meu nome é Bruno Almeida, sou desenvolvedor Front-end Pleno, focado em
+        criar aplicações escaláveis e interfaces profissionais. Tenho experiência com
+        React, TypeScript, Sass e metodologias ágeis.
+      </p>
+      <p>
+        Meu objetivo é entregar código limpo, testável e visualmente agradável, sempre
+        seguindo as melhores práticas do mercado.
       </p>
     </section>
   );
