@@ -7,11 +7,25 @@ import { Contact } from "../components/Contact/Contact";
 export const Home = () => {
   return (
     <>
-      <Hero />
-      <Stack />
-      <Projects />
-      <About />
-      <Contact />
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section id="stack">
+        <Stack />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
     </>
   );
 };
