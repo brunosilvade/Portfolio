@@ -1,11 +1,10 @@
 import { Outlet } from "react-router-dom";
+import { Navbar } from "../components/Navbar/Navbar";
 
 export const MainLayout = () => {
   return (
     <div>
-      <header>
-        <h1>Portfolio Bruno Almeida</h1>
-      </header>
+      <Navbar/>
 
       <main>
         <Outlet /> {/* Aqui o Home será renderizado */}
