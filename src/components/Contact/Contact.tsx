@@ -4,6 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 export const Contact = () => {
   return (
     <section className="contact">
+      <div className="container">
       <h2>Contato</h2>
 
       <div className="contact-card">
@@ -37,6 +38,7 @@ export const Contact = () => {
           <FaGithub />
           GitHub
         </a>
+      </div>
       </div>
     </section>
   );

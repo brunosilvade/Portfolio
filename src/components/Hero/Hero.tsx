@@ -28,10 +28,12 @@ export const Hero = () => {
 
   return (
     <section ref={heroRef} className="hero">
+     <div>
       <h1 className="hero-title">Bruno Almeida</h1>
       <p className="hero-subtitle">
         Front-end Developer focado em performance, arquitetura e experiência
       </p>
+     </div>
     </section>
   );
 };
