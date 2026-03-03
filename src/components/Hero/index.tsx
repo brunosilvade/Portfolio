@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-import "../../styles/components/_hero.scss";
+import "./hero.scss";
 
 export const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);

@@ -1,4 +1,4 @@
-import "../../styles/components/_contact.scss";
+import "./contact.scss";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const Contact = () => {

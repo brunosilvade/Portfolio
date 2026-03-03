@@ -1,4 +1,4 @@
-import "../../styles/components/_projects.scss";
+import "./projects.scss";
 
 interface Project {
   name: string;

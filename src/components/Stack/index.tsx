@@ -1,4 +1,4 @@
-import "../../styles/components/_stack.scss";
+import "./stack.scss";
 
 export const Stack = () => {
   const frontendArchitecture = [
