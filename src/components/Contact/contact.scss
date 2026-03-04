@@ -1,106 +1,109 @@
+@use "../../styles/variables" as *;
+
 .contact {
   text-align: center;
-  margin: 5rem 1rem;
+  margin: $space-6 $space-3;
 
   h2 {
-    margin-bottom: 2.5rem;
+    margin-bottom: $space-5;
+    font-size: $font-xl;
+    color: $color-text-primary;
   }
-}
 
-.contact-card {
-  max-width: 460px;
-  margin: 0 auto;
-  padding: 2.5rem;
-  border-radius: 18px;
+  .contact-card {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: $space-5;
+    border-radius: $radius-xl;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: $shadow-sm;
 
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: $space-3;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
+      input,
+      textarea {
+        padding: $space-2 $space-3;
+        border-radius: $radius-md;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: $color-text-primary;
+        font-size: $font-sm;
+        transition: $transition-base;
+        resize: none;
 
-.contact-card form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
+        &:focus {
+          outline: none;
+          border: 1px solid $color-text-primary;
+          background: rgba(255, 255, 255, 0.08);
+        }
+      }
 
-.contact-card input,
-.contact-card textarea {
-  padding: 0.9rem 1rem;
-  border-radius: 10px;
+      button {
+        margin-top: $space-2;
+        padding: $space-2;
+        border-radius: $radius-md;
+        border: none;
+        font-weight: 600;
+        font-size: $font-sm;
+        background: $color-text-primary;
+        color: $color-bg-primary;
+        cursor: pointer;
+        transition: $transition-base;
 
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+        &:hover {
+          background: $color-text-secondary;
+          color: $color-bg-primary;
+          transform: translateY(-2px);
+        }
+      }
+    }
+      .contact-alt {
+      margin-top: $space-5;
+      font-size: $font-xs;
+      color: $color-text-secondary;  
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: color $transition-base;
+    }
+    .contact-social {
+      display: flex;
+      justify-content: center;
+      gap: $space-4;
+      margin-top: $space-3;
+      flex-wrap: nowrap;
 
-  color: #fff;
-  font-size: 0.95rem;
+      a[class^="social-"] {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-2;
+        padding: $space-2 $space-4;
+        border-radius: $radius-md;
+        background: $color-bg-secondary;
+        border: 1px solid $color-border-secondary;
+        color: $color-text-primary;
+        font-size: $font-sm;
+        font-weight: 500;
+        transition: $transition-base;
+        cursor: pointer;
+        text-decoration: none;
+        white-space: nowrap;
+        min-width: 120px;
 
-  transition: all 0.2s ease;
-}
+        svg {
+          font-size: 1rem;
+        }
 
-.contact-card input:focus,
-.contact-card textarea:focus {
-  outline: none;
-  border: 1px solid #1e90ff;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.contact-card button {
-  margin-top: 0.5rem;
-  padding: 0.9rem;
-  border-radius: 10px;
-  border: none;
-
-  font-weight: 600;
-  font-size: 0.95rem;
-
-  background: #1e90ff;
-  color: #fff;
-
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.contact-card button:hover {
-  background: #187bdb;
-  transform: translateY(-2px);
-}
-
-/* Texto alternativo */
-
-.contact-alt {
-  margin-top: 2.5rem;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* Botões sociais */
-
-.contact-social {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.social-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.social-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
+        &:hover {
+          background: $color-bg-primary;
+          box-shadow: 0 0 8px $color-glow;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
 }

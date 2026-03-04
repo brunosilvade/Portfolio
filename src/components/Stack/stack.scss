@@ -1,78 +1,65 @@
+@use "../../styles/variables" as *;
+
 .stack {
-  padding: 5rem 1rem;
+  padding: $space-6 $space-3;
   text-align: center;
 
   h2 {
-    font-size: 2rem;
+    font-size: $font-xl;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: $space-6;
     letter-spacing: 0.5px;
+    color: $color-text-primary;
   }
 
-  /* Container que engloba todas as competências */
   .stack-categories {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-  }
+    gap: $space-5;
 
-  /* Container individual de cada área */
-  .stack-category {
-    background: #111;
-    border: 1px solid #222;
-    border-radius: 8px;
-    padding: 2rem 1.5rem;
-    text-align: left;
-    transition: 0.3s ease;
-
-    h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      color: #ccc;
-      letter-spacing: 0.5px;
-      text-align: center;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    li {
-      background: #1a1a1a;
-      padding: 0.7rem 1rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      border: 1px solid #262626;
-      transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    }
-
-    li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
-      filter: brightness(1.05);
-    }
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .stack {
-    .stack-categories {
+    @media (min-width: 1024px) {
       flex-direction: row;
       justify-content: center;
       align-items: stretch;
     }
+  }
 
-    .stack-category {
-      flex: 1;
-      max-width: 350px;
+  .stack-category {
+    background: $color-bg-secondary;
+    border: 1px solid $color-border-secondary;
+    border-radius: $radius-lg;
+    padding: $space-5 $space-4;
+    text-align: left;
+    transition: $transition-base;
+
+    h3 {
+      font-size: $font-md;
+      font-weight: 600;
+      margin-bottom: $space-4;
+      color: $color-text-secondary;
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: $space-2;
+
+      li {
+        background: $color-bg-tertiary;
+        padding: $space-2 $space-3;
+        border-radius: $radius-sm;
+        font-size: $font-sm;
+        border: 1px solid $color-border-secondary;
+        color: $color-text-primary;
+        transition: transform $transition-fast, box-shadow $transition-base, filter $transition-base;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 18px $color-glow; // glow branco
+          filter: brightness(1.05);
+        }
+      }
     }
   }
 }

@@ -1,62 +1,86 @@
-// Reset básico
+@use "./variables" as *;
+
+/* ===========================
+   🔁 Reset
+=========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-// HTML, body e root
-html, body, #root {
+/* ===========================
+   🌍 Base estrutural
+=========================== */
+html,
+body,
+#root {
   height: 100%;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
-  background: #0f0f0f;
-  color: #fff;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, 
+               "Segoe UI", Roboto, Oxygen, sans-serif;
+  background-color: $color-bg-primary;
+  color: $color-text-primary;
   scroll-behavior: smooth;
   cursor: default;
 }
 
-// Main com padding-top para Navbar fixa
+/* ===========================
+   📦 Layout principal
+=========================== */
 main {
-  padding-top: 70px; // mesma altura da Navbar
-}
+  padding-top: $navbar-height;}
 
-// Footer
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  background: #0f0f0f;
-  color: #fff;
-}
-
-// Links
+/* ===========================
+   🔗 Links globais
+=========================== */
 a {
   text-decoration: none;
-  color: inherit;
+  color: inherit; 
 }
 
-// Headings
-h1, h2, h3 {
+/* ===========================
+   🧱 Tipografia
+=========================== */
+h1,
+h2,
+h3 {
   font-weight: 500;
 }
 
-// Listas
+/* ===========================
+   📋 Listas
+=========================== */
 ul {
   list-style: none;
 }
 
-// Seções
+/* ===========================
+   🧩 Seções
+=========================== */
 section {
-  padding: 4rem 1.5rem;
+  padding: $space-6 $space-3;
 }
 
 @media (min-width: 768px) {
   section {
-    padding: 6rem 2rem;
+    padding: $space-8 $space-4;
   }
 }
 
+/* ===========================
+   🏗 Container padrão
+=========================== */
 .container {
-  max-width: 1100px;
+  max-width: $container-max-width;
   margin: 0 auto;
 }
 
+/* ===========================
+   🦶 Footer
+=========================== */
+footer {
+  text-align: center;
+  padding: $space-5 0;
+  background-color: $color-bg-primary;
+  color: $color-text-secondary;
+}

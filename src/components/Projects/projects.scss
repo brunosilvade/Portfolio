@@ -1,59 +1,70 @@
+@use "../../styles/variables" as *;
+
 .projects {
   text-align: center;
-  margin: 3rem 1rem;
+  margin: $space-6 $space-3;
 
   h2 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #fff;
+    margin-bottom: $space-5;
+    font-size: $font-xl;
+    color: $color-text-primary;
   }
 
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: $space-5;
   }
 
   .project-card {
-    background: #121212;
-    padding: 1.5rem;
-    border-radius: 10px;
-    color: #fff;
+    background: $color-bg-secondary;
+    padding: $space-4;
+    border-radius: $radius-lg;
+    color: $color-text-primary;
     text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transition: transform $transition-fast, box-shadow $transition-base, filter $transition-base;
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25); 
-      filter: brightness(1.05); 
+      /* Glow branco ao invés de sombra escura */
+      box-shadow: 0 6px 18px $color-glow;
+      filter: brightness(1.05);
     }
 
     h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
+      margin-bottom: $space-2;
+      font-size: $font-md;
     }
 
     p {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
+      font-size: $font-sm;
+      margin-bottom: $space-3;
       line-height: 1.4;
+      color: $color-text-secondary;
     }
 
     ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.5rem;
+      gap: $space-2;
       padding: 0;
       list-style: none;
-    }
 
-    li {
-      background: #1e1e1e;
-      padding: 0.25rem 0.75rem;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      font-weight: 500;
+      li {
+        background: $color-bg-tertiary;
+        padding: $space-1 $space-3;
+        border-radius: $radius-sm;
+        font-size: $font-xs;
+        font-weight: 500;
+        transition: transform $transition-fast, box-shadow $transition-base, filter $transition-base;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 4px 12px $color-glow;
+          filter: brightness(1.05);
+        }
+      }
     }
   }
 }

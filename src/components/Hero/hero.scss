@@ -1,18 +1,22 @@
+@use "../../styles/variables" as *;
+
 .hero {
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: $space-6 $space-3;
 
   .hero-title {
-    font-size: 3rem;
+    font-size: $font-3xl;
     font-weight: 600;
+    color: $color-text-primary;
   }
 
   .hero-subtitle {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: #b3b3b3;
+    margin-top: $space-2;
+    font-size: $font-md;
+    color: $color-text-secondary;
   }
 }

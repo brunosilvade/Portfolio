@@ -1,10 +1,18 @@
+@use "../../styles/variables" as *;
+
 .about {
+  text-align: center;
+  padding: $space-6 $space-3;
+
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: $space-3;
+    font-size: $font-xl;
+    color: $color-text-primary;
   }
 
   p {
-    color: #aaa;
+    color: $color-text-secondary;
     line-height: 1.6;
+    font-size: $font-sm;
   }
 }
